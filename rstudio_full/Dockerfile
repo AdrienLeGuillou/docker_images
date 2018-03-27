@@ -15,4 +15,3 @@ COPY user-settings /home/rstudio/
 RUN mkdir -p /home/rstudio/.rstudio/monitored/user-settings /home/rstudio/work \
     && mv /home/rstudio/user-settings /home/rstudio/.rstudio/monitored/user-settings/ \
     && chown -R rstudio:rstudio /home/rstudio
-
