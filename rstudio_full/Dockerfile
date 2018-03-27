@@ -1,8 +1,14 @@
-FROM rocker/verse:latest
+FROM rocker/geospatial:latest
+
+# install some dependencies
+#RUN apt-get update \ 
+#	&& apt-get install -y --no-install-recommends \
+#		libgeos-dev \
+#	&& rm -rf /var/lib/apt/lists/*
 
 # install R packages
-RUN install2.r corrplot ggpubr psy MatchIt tableone pROC cobalt icd DBI MonetDBLite \
-	       geosphere rgeos rgdal maptools ggmap Hmisc
+RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
+		       DBI MonetDBLite ggmap Hmisc
 
 # and those from github
 RUN  Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
