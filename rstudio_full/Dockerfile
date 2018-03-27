@@ -1,20 +1,16 @@
 FROM rocker/geospatial:latest
 
-# install some dependencies
-#RUN apt-get update \ 
-#	&& apt-get install -y --no-install-recommends \
-#		libgeos-dev \
-#	&& rm -rf /var/lib/apt/lists/*
-
-# install R packages
+# install R packages 
+# verify that they are not already presents before adding them
 RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
-		       DBI MonetDBLite ggmap Hmisc
+    DBI MonetDBLite ggmap fmsb \
 
 # and those from github
-RUN  Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
-   &&Rscript -e 'devtools::install_github("AdrienLeGuillou/descriptor")'
+    && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
+    && Rscript -e 'devtools::install_github("AdrienLeGuillou/descriptor")' \
 
 # copy rstudio server user settings
-RUN mkdir -p /home/rstudio/.rstudio/monitored/user-settings
-ADD user-settings /home/rstudio/.rstudio/monitored/user-settings/
-RUN chown -R rstudio:rstudio /home/rstudio/.rstudio
+    && mkdir -p /home/rstudio/.rstudio/monitored/user-settings /home/rstudio/work \
+    && chown -R rstudio:rstudio /home/rstudio
+
+ADD --chown=rstudio:rstudio user-settings /home/rstudio/.rstudio/monitored/user-settings/
