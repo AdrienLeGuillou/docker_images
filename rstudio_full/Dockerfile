@@ -3,7 +3,7 @@ FROM rocker/geospatial:latest
 # install R packages 
 # verify that they are not already presents before adding them
 RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
-    DBI MonetDBLite ggmap fmsb survminer optmatch \
+    DBI MonetDBLite ggmap fmsb survminer optmatch plotly \
 
 # and those from github
     && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
