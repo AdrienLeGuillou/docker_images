@@ -1,11 +1,16 @@
+FROM gallarus/libxgboost:latest as libxgboost
+
 FROM gcr.io/tensorflow/tensorflow:latest-gpu-py3
 
 RUN pip --no-cache-dir install \
     jupyterlab \
     seaborn \
-    xgboost \
     pandas-profiling \
     catboost
+    
+    
+COPY --from=libxgboost /home/xgboost /home/xgboost
+RUN cd /home/xgboost/python-package; python setup.py install
 
 RUN mkdir /work
 
