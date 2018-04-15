@@ -17,3 +17,4 @@ RUN mkdir /work
 WORKDIR "/work"
 
 COPY run_jupyter.sh /
+COPY jupyter_notebook_config.py /root/.jupyter/
