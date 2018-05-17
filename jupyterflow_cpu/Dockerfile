@@ -18,3 +18,5 @@ WORKDIR "/work"
 
 COPY run_jupyter.sh /
 COPY jupyter_notebook_config.py /root/.jupyter/
+
+RUN chmod 777 /run_jupyter.sh && chmod 777 /root/.jupyter/jupyter_notebook_config.py
