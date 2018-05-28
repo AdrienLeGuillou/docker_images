@@ -14,5 +14,6 @@
 # limitations under the License.
 # ==============================================================================
 
+nohup tensorboard --logdir /work/tbGraphs &
+jupyter lab "$@" 
 
-jupyter lab "$@"
