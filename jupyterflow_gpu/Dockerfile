@@ -7,7 +7,8 @@ RUN pip --no-cache-dir install \
     jupyterlab \
     seaborn \
     pandas-profiling \
-    catboost
+    catboost \
+    requests
     
     
 COPY --from=libxgboost /home/xgboost /home/xgboost
