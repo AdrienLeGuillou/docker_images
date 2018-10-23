@@ -4,7 +4,7 @@ FROM rocker/geospatial:latest
 # verify that they are not already presents before adding them
 RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     DBI MonetDBLite ggmap fmsb survminer optmatch plotly profvis formula.tools \
-    ggfortify pryr \ 
+    ggfortify pryr segmented \ 
 
 # and those from github
     && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
