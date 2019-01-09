@@ -5,9 +5,9 @@ FROM rocker/geospatial:latest
 RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     DBI MonetDBLite ggmap fmsb survminer optmatch plotly profvis formula.tools \
     ggfortify pryr segmented lobstr bench codetools testthat withr tailr \ 
-    EpiModel shiny rlang caret xgboost randomForest moments tidymodels \
-    ClustOfVar drake callr \
-
+    EpiModel shiny rlang caret xgboost randomForest moments  \
+    ClustOfVar drake callr multiprocess \
+    # tidymodels \
 # and those from github
     && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
     && Rscript -e 'devtools::install_github("AdrienLeGuillou/descriptor")' 
