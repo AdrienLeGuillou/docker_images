@@ -1,5 +1,8 @@
 FROM rocker/geospatial:latest
 
+# install htop
+RUN apt-get install -y --no-install-recommends htop
+
 # install R packages 
 # verify that they are not already presents before adding them
 RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
