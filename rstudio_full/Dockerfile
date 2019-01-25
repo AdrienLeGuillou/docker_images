@@ -9,7 +9,7 @@ RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     DBI MonetDBLite ggmap fmsb survminer optmatch plotly profvis formula.tools \
     ggfortify pryr segmented lobstr bench codetools testthat withr tailr \ 
     EpiModel shiny rlang caret xgboost randomForest moments  \
-    ClustOfVar drake callr cowplot simmer arkdb fs\
+    ClustOfVar drake callr cowplot simmer arkdb fs tinytex \
     # tidymodels \
 # and those from github
     && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
