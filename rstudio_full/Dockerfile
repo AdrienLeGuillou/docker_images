@@ -9,7 +9,7 @@ RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     DBI MonetDBLite ggmap fmsb survminer optmatch plotly profvis formula.tools \
     ggfortify pryr segmented lobstr bench codetools testthat withr tailr \ 
     EpiModel shiny rlang caret xgboost randomForest moments  ggrepel desctable \
-    ClustOfVar callr cowplot simmer arkdb fs tinytex \
+    ClustOfVar callr cowplot simmer arkdb fs tinytex ggcorrplot \
     drake txtq visNetwork \
     # tidymodels \
 # and those from github
