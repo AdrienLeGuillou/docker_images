@@ -14,6 +14,7 @@ RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     # tidymodels \
 # and those from github
     && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
+    && Rscript -e 'devtools::install_github("rstudio/gt")' \
     && Rscript -e 'devtools::install_github("AdrienLeGuillou/descriptor")' 
 
 # copy rstudio server user settings
