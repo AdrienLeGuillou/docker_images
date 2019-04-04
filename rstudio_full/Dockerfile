@@ -8,7 +8,7 @@ RUN apt-get install -y --no-install-recommends htop
 RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     DBI MonetDBLite ggmap fmsb survminer optmatch plotly profvis formula.tools \
     ggfortify pryr segmented lobstr bench codetools testthat withr tailr \ 
-    EpiModel shiny rlang caret xgboost randomForest moments  ggrepel desctable \
+    EpiModel shiny rlang caret xgboost randomForest pdp moments  ggrepel desctable \
     ClustOfVar callr cowplot simmer arkdb fs tinytex ggcorrplot \
     drake txtq visNetwork skimr rticles here \
     foreach future future.callr doFuture future.batchtools \
