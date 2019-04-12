@@ -10,7 +10,7 @@ RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     ggfortify pryr segmented lobstr bench codetools testthat withr tailr ggridges \ 
     EpiModel shiny rlang caret xgboost randomForest pdp moments  ggrepel desctable \
     ClustOfVar callr cowplot simmer arkdb fs tinytex ggcorrplot \
-    drake txtq visNetwork skimr rticles here \
+    drake txtq visNetwork skimr rticles here pkgnet \
     foreach future future.callr doFuture future.batchtools \
     # tidymodels \
 # and those from github
