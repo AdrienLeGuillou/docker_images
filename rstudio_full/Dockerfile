@@ -11,7 +11,7 @@ RUN install2.r --error corrplot ggpubr psy MatchIt tableone pROC cobalt icd \
     EpiModel shiny rlang caret xgboost randomForest pdp moments  ggrepel desctable \
     ClustOfVar callr cowplot simmer arkdb fs tinytex ggcorrplot \
     drake txtq visNetwork skimr rticles here pkgnet reprex \
-    foreach future future.callr doFuture future.batchtools RefManageR \
+    foreach future future.callr doFuture future.batchtools RefManageR citr \
     # tidymodels \
 # and those from github
     && Rscript -e 'devtools::install_github("IM-APHP/pmeasyr")' \
